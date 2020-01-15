@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hMd-0u-I7O">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Info View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="UserInfoViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Is Your Name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX1-iq-Qyo">
+                                <rect key="frame" x="106.5" y="354" width="201" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="22"/>
+                                <color key="textColor" red="0.31865093111991882" green="0.61887234449386597" blue="0.9115179181098938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Is Your Zodiac Sign?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-ha-ppE">
+                                <rect key="frame" x="84.5" y="521.5" width="245" height="26.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="21"/>
+                                <color key="textColor" red="0.32653123140335083" green="0.59404873847961426" blue="0.90759563446044922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61M-rG-dGB">
+                                <rect key="frame" x="130" y="412" width="154" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-b6-9el">
+                                <rect key="frame" x="183" y="846" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ENTER"/>
+                                <connections>
+                                    <segue destination="uGa-3L-y5R" kind="unwind" unwindAction="savePreferencesButtonPressedWithSegue:" id="6nf-TF-FXI"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8oi-FS-7ne">
+                                <rect key="frame" x="47" y="588" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43077769875526428" green="0.73870140314102173" blue="0.90607661008834839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08S-CA-IG5">
+                                <rect key="frame" x="35" y="96" width="359" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.067639358341693878" green="0.12834784388542175" blue="0.24820151925086975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="byP-rp-6Ka"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="08S-CA-IG5" id="jzD-2n-v67"/>
+                        <outlet property="enterButton" destination="XjH-b6-9el" id="C3b-u8-OBX"/>
+                        <outlet property="nameLabel" destination="SX1-iq-Qyo" id="vVr-cU-yGY"/>
+                        <outlet property="nameTextField" destination="61M-rG-dGB" id="EKT-3G-gYb"/>
+                        <outlet property="zodiacSignPicker" destination="8oi-FS-7ne" id="MM1-6L-fmB"/>
+                        <outlet property="zodiacsignLabel" destination="sl6-ha-ppE" id="cSL-Mr-XR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="uGa-3L-y5R" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2763.768115942029" y="103.79464285714285"/>
+        </scene>
+        <!--Horoscope View Controller-->
+        <scene sceneID="V0Z-eB-D5E">
+            <objects>
+                <viewController id="EnP-GA-kCX" customClass="HoroscopeViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijd-6C-5Uz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Horoscope Info" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5SJ-rI-HrH">
+                                <rect key="frame" x="20" y="569" width="374" height="263"/>
+                                <color key="backgroundColor" red="0.018731802701950073" green="0.63024300336837769" blue="0.97530955076217651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-wo-biW">
+                                <rect key="frame" x="20" y="118" width="374" height="317"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq9-od-D8C">
+                                <rect key="frame" x="150" y="512.5" width="114" height="26.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.076069198548793793" green="0.12498755007982254" blue="0.28665494918823242" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5SJ-rI-HrH" firstAttribute="top" secondItem="bq9-od-D8C" secondAttribute="bottom" constant="30" id="DJz-DD-mYD"/>
+                            <constraint firstItem="uAR-Q6-zd5" firstAttribute="trailing" secondItem="GxP-wo-biW" secondAttribute="trailing" constant="20" id="DPU-qe-bWK"/>
+                            <constraint firstItem="5SJ-rI-HrH" firstAttribute="height" secondItem="ijd-6C-5Uz" secondAttribute="height" multiplier="0.293527" id="EQ2-1v-Q1J"/>
+                            <constraint firstItem="GxP-wo-biW" firstAttribute="leading" secondItem="uAR-Q6-zd5" secondAttribute="leading" constant="20" id="HS4-wA-p8i"/>
+                            <constraint firstItem="GxP-wo-biW" firstAttribute="top" secondItem="uAR-Q6-zd5" secondAttribute="top" constant="30" id="aPw-3A-i1d"/>
+                            <constraint firstItem="uAR-Q6-zd5" firstAttribute="trailing" secondItem="5SJ-rI-HrH" secondAttribute="trailing" constant="20" id="cKe-1U-0yU"/>
+                            <constraint firstItem="5SJ-rI-HrH" firstAttribute="leading" secondItem="uAR-Q6-zd5" secondAttribute="leading" constant="20" id="e8Z-R1-fAA"/>
+                            <constraint firstItem="bq9-od-D8C" firstAttribute="centerX" secondItem="ijd-6C-5Uz" secondAttribute="centerX" id="kJX-Mp-xmo"/>
+                            <constraint firstItem="GxP-wo-biW" firstAttribute="height" secondItem="ijd-6C-5Uz" secondAttribute="height" multiplier="0.353795" id="lqE-yr-HXa"/>
+                            <constraint firstItem="uAR-Q6-zd5" firstAttribute="bottom" secondItem="5SJ-rI-HrH" secondAttribute="bottom" constant="30" id="lqJ-Ck-rjJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uAR-Q6-zd5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sgv-ob-4um">
+                        <barButtonItem key="rightBarButtonItem" title="SETTINGS" id="iXt-6c-6e2">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="ZEM-Pa-4My"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="horoscopeTextView" destination="5SJ-rI-HrH" id="her-7U-uUH"/>
+                        <outlet property="signImageView" destination="GxP-wo-biW" id="3HO-ld-EYw"/>
+                        <outlet property="signNameLabel" destination="bq9-od-D8C" id="RIq-AX-JwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iph-VJ-6OC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ikh-Lo-fSE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hMd-0u-I7O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hYE-S6-G7N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EnP-GA-kCX" kind="relationship" relationship="rootViewController" id="4Hl-t2-yTX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6S-QJ-bdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.59420289855075" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>

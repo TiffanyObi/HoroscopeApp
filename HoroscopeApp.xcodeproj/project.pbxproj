@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E305AB623CD2C4400AB623D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AB523CD2C4400AB623D /* AppDelegate.swift */; };
+		3E305AB823CD2C4400AB623D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AB723CD2C4400AB623D /* SceneDelegate.swift */; };
+		3E305ABA23CD2C4400AB623D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AB923CD2C4400AB623D /* UserInfoViewController.swift */; };
+		3E305ABD23CD2C4400AB623D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E305ABB23CD2C4400AB623D /* Main.storyboard */; };
+		3E305ABF23CD2C4700AB623D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E305ABE23CD2C4700AB623D /* Assets.xcassets */; };
+		3E305AC223CD2C4700AB623D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E305AC023CD2C4700AB623D /* LaunchScreen.storyboard */; };
+		3E305ACD23CD2C4800AB623D /* HoroscopeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305ACC23CD2C4800AB623D /* HoroscopeAppTests.swift */; };
+		3E305ADE23CD2DF400AB623D /* NetworkHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3E305ADD23CD2DF400AB623D /* NetworkHelper */; };
+		3E305AE123CD356000AB623D /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AE023CD356000AB623D /* Horoscope.swift */; };
+		3E305AE323CD364500AB623D /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AE223CD364500AB623D /* HoroscopeAPIClient.swift */; };
+		3E305B1E23CE5D1D00AB623D /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305B1D23CE5D1D00AB623D /* HoroscopeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E305AC923CD2C4800AB623D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E305AAA23CD2C4400AB623D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E305AB123CD2C4400AB623D;
+			remoteInfo = HoroscopeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E305AB223CD2C4400AB623D /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E305AB523CD2C4400AB623D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E305AB723CD2C4400AB623D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E305AB923CD2C4400AB623D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		3E305ABC23CD2C4400AB623D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E305ABE23CD2C4700AB623D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E305AC123CD2C4700AB623D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E305AC323CD2C4700AB623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E305AC823CD2C4800AB623D /* HoroscopeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoroscopeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E305ACC23CD2C4800AB623D /* HoroscopeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAppTests.swift; sourceTree = "<group>"; };
+		3E305ACE23CD2C4800AB623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E305AE023CD356000AB623D /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		3E305AE223CD364500AB623D /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
+		3E305B1D23CE5D1D00AB623D /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E305AAF23CD2C4400AB623D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E305ADE23CD2DF400AB623D /* NetworkHelper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E305AC523CD2C4800AB623D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E305AA923CD2C4400AB623D = {
+			isa = PBXGroup;
+			children = (
+				3E305ADF23CD352C00AB623D /* Module & ApiClient */,
+				3E305AB423CD2C4400AB623D /* HoroscopeApp */,
+				3E305ACB23CD2C4800AB623D /* HoroscopeAppTests */,
+				3E305AB323CD2C4400AB623D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E305AB323CD2C4400AB623D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E305AB223CD2C4400AB623D /* HoroscopeApp.app */,
+				3E305AC823CD2C4800AB623D /* HoroscopeAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E305AB423CD2C4400AB623D /* HoroscopeApp */ = {
+			isa = PBXGroup;
+			children = (
+				3E305AB523CD2C4400AB623D /* AppDelegate.swift */,
+				3E305AB723CD2C4400AB623D /* SceneDelegate.swift */,
+				3E305AB923CD2C4400AB623D /* UserInfoViewController.swift */,
+				3E305ABB23CD2C4400AB623D /* Main.storyboard */,
+				3E305B1D23CE5D1D00AB623D /* HoroscopeViewController.swift */,
+				3E305ABE23CD2C4700AB623D /* Assets.xcassets */,
+				3E305AC023CD2C4700AB623D /* LaunchScreen.storyboard */,
+				3E305AC323CD2C4700AB623D /* Info.plist */,
+			);
+			path = HoroscopeApp;
+			sourceTree = "<group>";
+		};
+		3E305ACB23CD2C4800AB623D /* HoroscopeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E305ACC23CD2C4800AB623D /* HoroscopeAppTests.swift */,
+				3E305ACE23CD2C4800AB623D /* Info.plist */,
+			);
+			path = HoroscopeAppTests;
+			sourceTree = "<group>";
+		};
+		3E305ADF23CD352C00AB623D /* Module & ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				3E305AE023CD356000AB623D /* Horoscope.swift */,
+				3E305AE223CD364500AB623D /* HoroscopeAPIClient.swift */,
+			);
+			path = "Module & ApiClient";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E305AB123CD2C4400AB623D /* HoroscopeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E305AD123CD2C4800AB623D /* Build configuration list for PBXNativeTarget "HoroscopeApp" */;
+			buildPhases = (
+				3E305AAE23CD2C4400AB623D /* Sources */,
+				3E305AAF23CD2C4400AB623D /* Frameworks */,
+				3E305AB023CD2C4400AB623D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoroscopeApp;
+			packageProductDependencies = (
+				3E305ADD23CD2DF400AB623D /* NetworkHelper */,
+			);
+			productName = HoroscopeApp;
+			productReference = 3E305AB223CD2C4400AB623D /* HoroscopeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E305AC723CD2C4800AB623D /* HoroscopeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E305AD423CD2C4800AB623D /* Build configuration list for PBXNativeTarget "HoroscopeAppTests" */;
+			buildPhases = (
+				3E305AC423CD2C4800AB623D /* Sources */,
+				3E305AC523CD2C4800AB623D /* Frameworks */,
+				3E305AC623CD2C4800AB623D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E305ACA23CD2C4800AB623D /* PBXTargetDependency */,
+			);
+			name = HoroscopeAppTests;
+			productName = HoroscopeAppTests;
+			productReference = 3E305AC823CD2C4800AB623D /* HoroscopeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E305AAA23CD2C4400AB623D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Tiffany Obi";
+				TargetAttributes = {
+					3E305AB123CD2C4400AB623D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					3E305AC723CD2C4800AB623D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3E305AB123CD2C4400AB623D;
+					};
+				};
+			};
+			buildConfigurationList = 3E305AAD23CD2C4400AB623D /* Build configuration list for PBXProject "HoroscopeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E305AA923CD2C4400AB623D;
+			packageReferences = (
+				3E305ADC23CD2DF400AB623D /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */,
+			);
+			productRefGroup = 3E305AB323CD2C4400AB623D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E305AB123CD2C4400AB623D /* HoroscopeApp */,
+				3E305AC723CD2C4800AB623D /* HoroscopeAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E305AB023CD2C4400AB623D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E305AC223CD2C4700AB623D /* LaunchScreen.storyboard in Resources */,
+				3E305ABF23CD2C4700AB623D /* Assets.xcassets in Resources */,
+				3E305ABD23CD2C4400AB623D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E305AC623CD2C4800AB623D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E305AAE23CD2C4400AB623D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E305AE123CD356000AB623D /* Horoscope.swift in Sources */,
+				3E305AE323CD364500AB623D /* HoroscopeAPIClient.swift in Sources */,
+				3E305ABA23CD2C4400AB623D /* UserInfoViewController.swift in Sources */,
+				3E305B1E23CE5D1D00AB623D /* HoroscopeViewController.swift in Sources */,
+				3E305AB623CD2C4400AB623D /* AppDelegate.swift in Sources */,
+				3E305AB823CD2C4400AB623D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E305AC423CD2C4800AB623D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E305ACD23CD2C4800AB623D /* HoroscopeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E305ACA23CD2C4800AB623D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E305AB123CD2C4400AB623D /* HoroscopeApp */;
+			targetProxy = 3E305AC923CD2C4800AB623D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E305ABB23CD2C4400AB623D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E305ABC23CD2C4400AB623D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E305AC023CD2C4700AB623D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E305AC123CD2C4700AB623D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E305ACF23CD2C4800AB623D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E305AD023CD2C4800AB623D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E305AD223CD2C4800AB623D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4QS8KUX;
+				INFOPLIST_FILE = HoroscopeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tiffanyobi.HoroscopeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E305AD323CD2C4800AB623D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4QS8KUX;
+				INFOPLIST_FILE = HoroscopeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tiffanyobi.HoroscopeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E305AD523CD2C4800AB623D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4QS8KUX;
+				INFOPLIST_FILE = HoroscopeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tiffanyobi.HoroscopeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoroscopeApp.app/HoroscopeApp";
+			};
+			name = Debug;
+		};
+		3E305AD623CD2C4800AB623D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4QS8KUX;
+				INFOPLIST_FILE = HoroscopeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tiffanyobi.HoroscopeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoroscopeApp.app/HoroscopeApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E305AAD23CD2C4400AB623D /* Build configuration list for PBXProject "HoroscopeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E305ACF23CD2C4800AB623D /* Debug */,
+				3E305AD023CD2C4800AB623D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E305AD123CD2C4800AB623D /* Build configuration list for PBXNativeTarget "HoroscopeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E305AD223CD2C4800AB623D /* Debug */,
+				3E305AD323CD2C4800AB623D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E305AD423CD2C4800AB623D /* Build configuration list for PBXNativeTarget "HoroscopeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E305AD523CD2C4800AB623D /* Debug */,
+				3E305AD623CD2C4800AB623D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E305ADC23CD2DF400AB623D /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/NetworkHelperSPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E305ADD23CD2DF400AB623D /* NetworkHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E305ADC23CD2DF400AB623D /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */;
+			productName = NetworkHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3E305AAA23CD2C4400AB623D /* Project object */;
+}

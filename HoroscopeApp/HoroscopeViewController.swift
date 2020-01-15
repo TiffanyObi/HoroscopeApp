@@ -18,6 +18,9 @@ class HoroscopeViewController: UIViewController {
     
     @IBOutlet weak var signNameLabel: UILabel!
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
     var horoscope: Horoscope? {
         didSet {
             DispatchQueue.main.async {
@@ -34,6 +37,8 @@ class HoroscopeViewController: UIViewController {
         getZodiacSign(with: zodiacString)
     }
     
+    
+    
     @IBAction func savePreferencesButtonPressed(segue:UIStoryboardSegue) {
     
     guard let savedChanges = segue.source as? UserInfoViewController else {
@@ -45,13 +50,18 @@ class HoroscopeViewController: UIViewController {
             zodiacString = "aries"
         }
         getZodiacSign(with: zodiacString)
+        
+        
     }
         
     func updateUI() {
+        usernameLabel.text = "Horoscope of the Day"
         signImageView.image = UIImage(named: "horoscope")
         
         signNameLabel.text = horoscope?.sunsign
         horoscopeTextView.text = horoscope?.horoscope
+        
+        
     }
     
     func getZodiacSign(with zodiacSign: String ) {

@@ -25,7 +25,13 @@ class UserInfoViewController: UIViewController {
     
 
     
-   var zodiacString = ""
+    var zodiacString = "" {
+        didSet {
+            UserPreference.shared.updateDefaults(with: zodiacString, for: UserPreferenceKey.zodiacSign)
+        }
+    }
+        
+    
     
     var signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     
@@ -68,7 +74,8 @@ extension UserInfoViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        zodiacString = signs[row].lowercased()
+        zodiacString =  signs[row].lowercased()
+        
         zodiacsignLabel.text = signs[row]
         print(zodiacString)
     }

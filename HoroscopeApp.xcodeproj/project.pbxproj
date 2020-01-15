@@ -18,6 +18,7 @@
 		3E305AE123CD356000AB623D /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AE023CD356000AB623D /* Horoscope.swift */; };
 		3E305AE323CD364500AB623D /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305AE223CD364500AB623D /* HoroscopeAPIClient.swift */; };
 		3E305B1E23CE5D1D00AB623D /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E305B1D23CE5D1D00AB623D /* HoroscopeViewController.swift */; };
+		3EE6800C23CFB53E006A9363 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6800B23CFB53E006A9363 /* UserPreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3E305AE023CD356000AB623D /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		3E305AE223CD364500AB623D /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 		3E305B1D23CE5D1D00AB623D /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+		3EE6800B23CFB53E006A9363 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		3E305AA923CD2C4400AB623D = {
 			isa = PBXGroup;
 			children = (
+				3EE6800B23CFB53E006A9363 /* UserPreferences.swift */,
 				3E305ADF23CD352C00AB623D /* Module & ApiClient */,
 				3E305AB423CD2C4400AB623D /* HoroscopeApp */,
 				3E305ACB23CD2C4800AB623D /* HoroscopeAppTests */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E305AE123CD356000AB623D /* Horoscope.swift in Sources */,
+				3EE6800C23CFB53E006A9363 /* UserPreferences.swift in Sources */,
 				3E305AE323CD364500AB623D /* HoroscopeAPIClient.swift in Sources */,
 				3E305ABA23CD2C4400AB623D /* UserInfoViewController.swift in Sources */,
 				3E305B1E23CE5D1D00AB623D /* HoroscopeViewController.swift in Sources */,

@@ -48,11 +48,11 @@ class UserInfoViewController: UIViewController {
 }
 
 extension UserInfoViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        nameLabel.text = "Welcome \(textField.text ?? "") !"
-        
-        return true
+    func textFieldDidEndEditing(_ textField: UITextField) {
+    
+        UserDefaults.standard.set(textField.text ?? "No_Name", forKey:"NameKey")
+        nameLabel.text = "Welcome \(UserDefaults.standard.object(forKey: "NameKey") ?? "No Name") !"
+
     }
 }
 
@@ -77,6 +77,8 @@ extension UserInfoViewController: UIPickerViewDelegate {
         zodiacString =  signs[row].lowercased()
         
         zodiacsignLabel.text = signs[row]
+        
+        UserDefaults.standard.set("\(zodiacString.uppercased())", forKey:"Zodiac Sign")
         print(zodiacString)
     }
 }

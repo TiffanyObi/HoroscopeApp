@@ -21,6 +21,7 @@ class HoroscopeViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     
     
+    
     var horoscope: Horoscope? {
         didSet {
             DispatchQueue.main.async {
@@ -29,22 +30,31 @@ class HoroscopeViewController: UIViewController {
         }
     }
     
-    var zodiacString = "pisces"
+    let welcomeMessage = "Horoscope of the Day"
+    
+    var zodiacString = ""
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.text = welcomeMessage
+        
+        if zodiacString == "" {
+            zodiacString = "libra"
+        }
         getZodiacSign(with: zodiacString)
     }
     
     
     
     @IBAction func savePreferencesButtonPressed(segue:UIStoryboardSegue) {
-    
+        usernameLabel.text = "Welcome \(UserDefaults.standard.object(forKey: "NameKey") as? String ?? "No Name") !"
     guard let savedChanges = segue.source as? UserInfoViewController else {
         fatalError("could not segue")
         }
-            signNameLabel.text = savedChanges.zodiacsignLabel.text
+
+        print(UserDefaults.standard.object(forKey: "NameKey") as? String ?? "no value")
+        signNameLabel.text = UserDefaults.standard.object(forKey: "Zodiac Sign") as? String
         zodiacString = savedChanges.zodiacString.lowercased()
         if zodiacString.isEmpty {
             zodiacString = "aries"
@@ -54,11 +64,23 @@ class HoroscopeViewController: UIViewController {
         
     }
         
-    func updateUI() {
-        usernameLabel.text = "Horoscope of the Day"
-        signImageView.image = UIImage(named: "horoscope")
+    
+    @IBAction func clearDefaultsButton(_ sender: UIBarButtonItem) {
         
-        signNameLabel.text = horoscope?.sunsign
+        
+        
+        UserDefaults.standard.removeObject(forKey: "NameKey")
+        
+        usernameLabel.text = welcomeMessage
+        
+        signNameLabel.text = signNameLabel.text
+    }
+    
+    func updateUI() {
+        
+        signImageView.image = UIImage(named: "horoscope")
+        usernameLabel.text = UserDefaults.standard.object(forKey: "NameKey") as? String ?? "Horoscope of the Day"
+        signNameLabel.text = UserDefaults.standard.object(forKey: "Zodiac Sign") as? String
         horoscopeTextView.text = horoscope?.horoscope
         
         
